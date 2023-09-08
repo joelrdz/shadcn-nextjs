@@ -1,4 +1,4 @@
-import { ShoppingCart } from 'lucide-react';
+import { Moon, ShoppingCart, Sun } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import Container from './ui/container';
@@ -49,6 +49,16 @@ const Header = () => {
             >
               <ShoppingCart className="h-6 w-6" />
               <span className="sr-only">Shopping Cart</span>
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="mr-6"
+              aria-label="Toggle Theme"
+            >
+              <Sun className="h-6 w-6 rotate-0 scale-100 transition-all dark:rotate-90 dark:scale-0" />
+              <Moon className="absolute h-6 w-6 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle Theme</span>
             </Button>
           </div>
         </div>
